@@ -1,9 +1,11 @@
 import "@styles/global.css"
+import Nav from "@components/Nav"
+
 export const metadata = {
     title: "PromptOpia DB",
     description: "Discover & Share AI Prompts"
 }
-const RootLayout = ({ Children }) => {
+const RootLayout = ({ children }) => {
     return (
 
         <html lang="en">
@@ -11,7 +13,8 @@ const RootLayout = ({ Children }) => {
                 <div className="main"></div>
                 <div className="gradient"></div>
                 <main className="app">
-                    {Children}
+                    <Nav />
+                    {children}
                 </main>
             </body>
 
